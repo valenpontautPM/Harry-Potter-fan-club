@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Jim_Nightshade';
+    src: url('../fonts/Jim_Nightshade/JimNightshade-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inknut_Antiqua';
+    src: url('../fonts/Inknut_AntiquaJim_Nightshade/JimNightshade-Regular.ttf') format('truetype');
+}
+
+.navbar__container{
+    background-color: #2C3539;
+    min-width: calc(100vw);
+    padding-top: 0.5rem;
+}
+.navbar__flex__box__title{
+    font-size: 3.7em;
+    color: white;
+    font-family: 'Jim_Nightshade';
+    padding-left: 1rem;
+}
+.navbar__flex__box__title__colored {
+    color: #B4B4B4;
+}
+.navbar__flex__stack{
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+.navbar__flex__stack__link{
+    color: #B4B4B4;
+}
+.bold-text{
+    font-weight: bold;
+}
+.container{
+    min-height: calc(100vh - 96.79px);
+    min-width: calc(100vw);
+    padding: 0;
+    margin: 0;
+}
+.house__container__card{
+    margin-top: 1rem;
+    width: 17rem;
+    height: 19rem;
+}
+.house__container__card__title{
+    font-family: 'Inknut_Antiqua';
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.house__container__card__image,.houseDetail__container__card1__image{
+    width: 10rem;
+    height: 11rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.house__container__card__button{
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container__houseDetail{
+    min-height: calc(100vh - 121px);
+    min-width: calc(100vw);
+    padding: 0;
+    margin: 0;
+}
+.houseDetail{
+    width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.houseDetail__container__card1, .houseDetail__container__card2{
+    min-height: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    width: 31.5rem;
+}
+.houseDetail__container__card1__title{
+    font-family: 'Inknut_Antiqua';
+    font-size: 2rem;
+
+}
+.houseDetail__container__card1__text{
+    padding-top: 1rem;
+    font-family: 'Inknut_Antiqua';
+}
+.houseDetail__container__card1__text_black{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.houseDetail__container__card2__ul__li{
+    padding-top: 1rem;
+}
+.houseDetail__container__card2__text1{
+    font-family: 'Inknut_Antiqua';
+    font-size: 1.5rem;
+}
+.houseDetail__container__card2__text2{
+    padding-top: 1rem;
+    font-family: 'Inknut_Antiqua';
+    font-size: 1.5rem;
+}
+.houseDetail__container__card1__image{
+    margin-top: 1rem;
+}
+.no_page__div{
+    min-height: calc(100vh - 96.79px);
+    display: flex;
+    justify-content: center;
+}
+.no_page__div__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.no_page__div__div__image{
+    width: 20rem;
+}
+.no_page__div__div__text{
+    font-family: Jim_Nightshade;
+    font-size: 2rem;
+}
