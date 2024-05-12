@@ -19,7 +19,7 @@ const NavBar = () => {
                         </Text>
                     </Link>
                     <Link to={`/houses`}>
-                        <Text className={`navbar__flex__stack__link ${location.pathname === '/houses' ? 'bold-text' : ''}`} variant='link'>
+                        <Text className={`navbar__flex__stack__link ${/^\/houses/.test(location.pathname) ? 'bold-text' : ''}`} variant='link'>
                             Houses
                         </Text>
                     </Link>
