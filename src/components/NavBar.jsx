@@ -1,9 +1,14 @@
 import { Container,Flex, Spacer,Box,Text,Stack } from '@chakra-ui/react'
 import { Link, useLocation } from 'react-router-dom';
+import * as amplitude from '@amplitude/analytics-browser';
+const AMPLITUDE_API_KEY = "986ab970a868fbebc01877a2b9d342ab"
+amplitude.init(AMPLITUDE_API_KEY);
 
 const NavBar = () => {
     const location = useLocation();
-
+    const handleVisitNavLink = (name) => {
+        amplitude.track('Visit NavLink', { nameLink: name });
+      };
     return (
         <>
         <Container className="navbar__container">
@@ -23,27 +28,27 @@ const NavBar = () => {
                             Houses
                         </Text>
                     </Link>
-                    <Link to={`/wizards`}>
+                    <Link to={`/wizards`} onClick={handleVisitNavLink("Wizards")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/wizards' ? 'bold-text' : ''}`} variant='link'>
                             Wizards
                         </Text>
                     </Link>
-                    <Link to={`/elixirs`}>
+                    <Link to={`/elixirs`} onClick={handleVisitNavLink("Elixirs")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/elixirs' ? 'bold-text' : ''}`} variant='link'>
                             Elixirs
                         </Text>
                     </Link>
-                    <Link to={`/ingredients`}>
+                    <Link to={`/ingredients`} onClick={handleVisitNavLink("Ingredients")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/ingredients' ? 'bold-text' : ''}`} variant='link'>
                             Ingredients
                         </Text>
                     </Link>
-                    <Link to={`/spoils`}>
+                    <Link to={`/spoils`} onClick={handleVisitNavLink("Spoils")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/spoils' ? 'bold-text' : ''}`} variant='link'>
                             Spoils
                         </Text>
                     </Link>
-                    <Link to={`/feedback`}>
+                    <Link to={`/feedback`} onClick={handleVisitNavLink("Feedback")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/feedback' ? 'bold-text' : ''}`}>
                             Feedback
                         </Text>
