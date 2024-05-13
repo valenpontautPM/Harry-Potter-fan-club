@@ -40,7 +40,6 @@ const HouseDetail = ({name,houseColours,founder,animal,element,ghost,commonRoom,
     )
 }
 HouseDetail.propTypes = {
-    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     houseColours: PropTypes.string.isRequired,
     founder: PropTypes.string.isRequired,
@@ -48,8 +47,8 @@ HouseDetail.propTypes = {
     element: PropTypes.string.isRequired,
     ghost: PropTypes.string.isRequired,
     commonRoom: PropTypes.string.isRequired,
-    heads: PropTypes.string.isRequired,
-    traits: PropTypes.string.isRequired,
+    heads: PropTypes.array.isRequired,
+    traits: PropTypes.array.isRequired,
     color_cod: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired
 };

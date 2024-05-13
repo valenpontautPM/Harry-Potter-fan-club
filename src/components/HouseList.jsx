@@ -36,7 +36,7 @@ const HouseList = ({houses}) => {
 }
 
 HouseList.propTypes = {
-    houses: PropTypes.object.isRequired
+    houses: PropTypes.array.isRequired
 };
 
 export default HouseList
