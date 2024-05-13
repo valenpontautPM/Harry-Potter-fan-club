@@ -1,7 +1,7 @@
 //This component is the loader while we wait for data to load
 
 import { AbsoluteCenter } from "@chakra-ui/react"
-import loading from '../img/witch_on_broom.gif'
+import loading from '../../public/img/witch_on_broom.gif'
 
 const Loading = () => {
   return(

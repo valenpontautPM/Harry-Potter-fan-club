@@ -2,7 +2,9 @@ import { Container,Flex, Spacer,Box,Text,Stack } from '@chakra-ui/react'
 import { Link, useLocation } from 'react-router-dom';
 import * as amplitude from '@amplitude/analytics-browser';
 const AMPLITUDE_API_KEY = "986ab970a868fbebc01877a2b9d342ab"
-amplitude.init(AMPLITUDE_API_KEY);
+amplitude.init(AMPLITUDE_API_KEY, {
+    defaultTracking: true,
+});
 
 const NavBar = () => {
     const location = useLocation();

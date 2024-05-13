@@ -1,5 +1,5 @@
 import { Text } from "@chakra-ui/react"
-import witch from '../img/witch_no_page.jpg'
+import witch from '../../public/img/witch_no_page.jpg'
 
 const Ingredients = () => {
     return(

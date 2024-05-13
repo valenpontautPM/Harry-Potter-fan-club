@@ -1,5 +1,5 @@
 import { Container,Flex,Image,Text } from "@chakra-ui/react"
-import shield from '../img/hogwarts.png'
+import shield from '../../public/img/hogwarts.png'
 const HomeContainer = () => {
     return(
         <Container className="container">
