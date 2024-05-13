@@ -13,7 +13,7 @@ const HouseList = ({houses}) => {
     }
     const dicc_img_house = {
         "Gryffindor" : "../../public/img/gryffindor.png",
-        "Ravenclaw" : ".././public/img/ravenclaw.png",
+        "Ravenclaw" : "../../public/img/ravenclaw.png",
         "Slytherin" : "../../public/img/slytherin.png",
         "Hufflepuff" : "../../public/img/hufflepuff.png"
     }
