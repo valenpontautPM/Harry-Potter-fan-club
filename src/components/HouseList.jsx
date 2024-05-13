@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const HouseList = ({houses}) => {
     const default_color_house = "#B06E3F"
-    const default_img_house = "../public/img/default.png"
+    const default_img_house = "../../public/img/default.png"
     const dicc_color_house = {
         "Gryffindor" : "#990000",
         "Ravenclaw" : "#2376AD",
@@ -12,10 +12,10 @@ const HouseList = ({houses}) => {
         "Hufflepuff" : "#DAAF00"
     }
     const dicc_img_house = {
-        "Gryffindor" : "../public/img/gryffindor.png",
-        "Ravenclaw" : "../public/img/ravenclaw.png",
-        "Slytherin" : "../public/img/slytherin.png",
-        "Hufflepuff" : "../public/img/hufflepuff.png"
+        "Gryffindor" : "../../public/img/gryffindor.png",
+        "Ravenclaw" : ".././public/img/ravenclaw.png",
+        "Slytherin" : "../../public/img/slytherin.png",
+        "Hufflepuff" : "../../public/img/hufflepuff.png"
     }
     return(
         <>
