@@ -125,6 +125,37 @@
     width: 20rem;
 }
 .no_page__div__div__text{
-    font-family: Jim_Nightshade;
+    font-family: 'Jim_Nightshade';
     font-size: 2rem;
+}
+.home__container__flex{
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+.home__container__flex__image{
+    height: 27rem;
+    padding-left: 5rem;
+}
+.home__container__flex__div{
+    background-color: #afb3b4;
+    border-radius: 0.5rem;
+    width: 31rem;
+    height: 31rem;
+    padding: 2rem;
+}
+.home__container__flex__div__title{
+    font-family: 'Jim_Nightshade';
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.home__container__flex__div__bodytext,.home__container__flex__div__endtext{
+    font-family: 'Inknut_Antiqua';
+    font-size: 1.3rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+.home__container__flex__div__endtext{
+    padding-top: 3rem;
 }
