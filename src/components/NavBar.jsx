@@ -25,7 +25,7 @@ const NavBar = () => {
                             Home
                         </Text>
                     </Link>
-                    <Link to={`/houses`}>
+                    <Link to={`/houses`} onClick={handleVisitNavLink("Houses")}>
                         <Text className={`navbar__flex__stack__link ${/^\/houses/.test(location.pathname) ? 'bold-text' : ''}`} variant='link'>
                             Houses
                         </Text>
