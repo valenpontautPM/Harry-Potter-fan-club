@@ -8,7 +8,7 @@ amplitude.init(AMPLITUDE_API_KEY, {
 
 const NavBar = () => {
     const location = useLocation();
-    const handleVisitNavLink = (name) => {
+    const handleVisitNavLink = (name) => () => {
         amplitude.track('Visit NavLink', { nameLink: name });
       };
     return (
