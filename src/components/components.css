@@ -159,3 +159,6 @@
 .home__container__flex__div__endtext{
     padding-top: 3rem;
 }
+.home__link{
+    text-decoration: underline; 
+}

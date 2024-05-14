@@ -10,7 +10,14 @@ const NavBar = () => {
     const location = useLocation();
     const handleVisitNavLink = (name) => () => {
         amplitude.track('Visit NavLink', { nameLink: name });
-      };
+    };
+    const handleClickVisitFeedback = () => {
+        amplitude.track('Click Visit Feedback', {from: "navbar"});
+    };
+    const handleCombinedClick = (name) => () => {
+        handleVisitNavLink(name)();
+        handleClickVisitFeedback();
+    };
     return (
         <>
         <Container className="navbar__container">
@@ -50,7 +57,7 @@ const NavBar = () => {
                             Spells
                         </Text>
                     </Link>
-                    <Link to={`/feedback`} onClick={handleVisitNavLink("Feedback")}>
+                    <Link to={`/feedback`} onClick={handleCombinedClick("Feedback")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/feedback' ? 'bold-text' : ''}`}>
                             Feedback
                         </Text>
