@@ -20,6 +20,7 @@ function App() {
           <Route exact path='/houses' element={<HousesContainer/>}/>
           <Route exact path='/houses/:id' element={<HouseDetailContainer/>}/>
           <Route exact path='/wizards' element={<Wizards/>}/>
+          <Route exact path='/wizards/:id' element={<Wizards/>}/>
           <Route exact path='/elixirs' element={<Elixirs/>}/>
           <Route exact path='/ingredients' element={<Ingredients/>}/>
           <Route exact path='/spells' element={<Spells/>}/>

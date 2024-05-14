@@ -1,7 +1,19 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 import { Card,Flex,Text,Image,UnorderedList,ListItem } from '@chakra-ui/react'
-
+import * as amplitude from '@amplitude/analytics-browser';
+const AMPLITUDE_API_KEY = "986ab970a868fbebc01877a2b9d342ab"
+amplitude.init(AMPLITUDE_API_KEY, {
+    defaultTracking: true,
+});
 const HouseDetail = ({name,houseColours,founder,animal,element,ghost,commonRoom,heads,traits,color_cod,img}) => {
+    const handleClickVisitHeadWizard = (nameWizard, nameHouse) => () => {
+        amplitude.track('Click Visit Head Wizard', {
+            houseWizard: nameHouse,
+            wizard: nameWizard
+            }
+        );
+      };
     return(
         <>
         <div className='houseDetail'>
@@ -29,7 +41,10 @@ const HouseDetail = ({name,houseColours,founder,animal,element,ghost,commonRoom,
                         <Text color={color_cod} className='houseDetail__container__card2__text2'>Heads:</Text>
                         <UnorderedList>
                             {heads?.map((head)=>
-                                <ListItem color={color_cod} className='houseDetail__container__card2__ul__li' key={head.id}><span className='houseDetail__container__card1__text_black'>{head.firstName} {head.lastName}</span></ListItem>
+                                <ListItem color={color_cod} className='houseDetail__container__card2__ul__li' key={head.id}>
+                                    <span className='houseDetail__container__card1__text_black'>{head.firstName} {head.lastName}</span>
+                                    <span><Link to={`/wizards/${head.id}`} onClick={handleClickVisitHeadWizard(`${head.firstName} ${head.lastName}`, name)}> (+ Info)</Link></span>
+                                </ListItem>
                             )}
                         </UnorderedList>
                     </div>
