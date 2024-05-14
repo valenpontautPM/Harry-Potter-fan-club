@@ -16,11 +16,11 @@ const NavBar = () => {
         <Container className="navbar__container">
             <Flex>
                 <Box>
-                    <Link to={`/`}><div className='navbar__flex__box__title'>Harry Potter<span className='navbar__flex__box__title__colored'> fan club</span></div></Link>
+                    <Link to={`/`} onClick={handleVisitNavLink("Home")}><div className='navbar__flex__box__title'>Harry Potter<span className='navbar__flex__box__title__colored'> fan club</span></div></Link>
                 </Box>
                 <Spacer/>
                 <Stack className="navbar__flex__stack" direction='row' spacing={9} align='end'>
-                    <Link to={`/`}>
+                    <Link to={`/`} onClick={handleVisitNavLink("Home")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/' ? 'bold-text' : ''}`} variant='link'>
                             Home
                         </Text>
