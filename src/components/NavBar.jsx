@@ -45,9 +45,9 @@ const NavBar = () => {
                             Ingredients
                         </Text>
                     </Link>
-                    <Link to={`/spoils`} onClick={handleVisitNavLink("Spoils")}>
-                        <Text className={`navbar__flex__stack__link ${location.pathname === '/spoils' ? 'bold-text' : ''}`} variant='link'>
-                            Spoils
+                    <Link to={`/spells`} onClick={handleVisitNavLink("Spells")}>
+                        <Text className={`navbar__flex__stack__link ${location.pathname === '/spells' ? 'bold-text' : ''}`} variant='link'>
+                            Spells
                         </Text>
                     </Link>
                     <Link to={`/feedback`} onClick={handleVisitNavLink("Feedback")}>

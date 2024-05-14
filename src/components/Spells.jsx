@@ -1,6 +1,6 @@
 import { Text } from "@chakra-ui/react"
 import witch from '../../public/img/witch_no_page.jpg'
-const Spoils = () => {
+const Spells = () => {
     return(
         <div className="no_page__div">
           <div className="no_page__div__div">
@@ -11,4 +11,4 @@ const Spoils = () => {
     )
 }
 
-export default Spoils
+export default Spells
