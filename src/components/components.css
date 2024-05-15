@@ -162,3 +162,65 @@
 .home__link{
     text-decoration: underline; 
 }
+.feedback__card{
+    background-color: #afb3b4;
+    border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    width: 38rem;
+    height: 31rem;
+    padding: 2rem;
+}
+.feedback__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+.feedback__title{
+    color: #2C3539;
+    font-family: 'Inknut_Antiqua';
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.feedback__card__text{
+    font-family: 'Inknut_Antiqua';
+}
+.feedback__card__select{
+    font-family: 'Inknut_Antiqua';
+    border-radius: 0.4rem;
+    width: 22rem;
+}
+.feedback__card__textarea{
+    width: 34rem;
+    height: 20rem;
+    overflow-y: auto;
+    resize: none;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    font-family: 'Inknut_Antiqua';
+}
+.feedback__button{
+    background-color: #2C3539;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    color: white;
+    font-family: 'Inknut_Antiqua';
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 14rem;
+}
+.feedback__response{
+    font-family: 'Inknut_Antiqua';
+    padding-top: 1rem;
+
+}
+.green_text{
+    color: green;
+}
+.red_text{
+    color: rgb(160, 30, 30);
+}
