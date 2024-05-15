@@ -22,7 +22,12 @@ const Feedback = () => {
             feedback,
             entityId: '3fa85f64-5717-4562-b3fc-2c963f66afa6' // hardcoded because my app doesn't register users IDs (this is taken from the api example)
         };
-        
+        if (feedback == "") {
+            setResponseColor('red_text');
+            setResponseMessage('Cannot send an empty feedback');
+            setIsSubmitting(false);
+            return;
+        }
         try {
             const response = await fetch('https://wizard-world-api.herokuapp.com/Feedback', {
                 method: 'POST',
@@ -72,7 +77,7 @@ const Feedback = () => {
                 <div>
                     <textarea placeholder="Write something here..." className='feedback__card__textarea' value={feedback} onChange={(e) => setFeedback(e.target.value)} />
                 </div>
-                <button className='feedback__button' type='submit' disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send'}</button>
+                <div className="feedback__form__div"><button className='feedback__form__div__button' type='submit' disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send'}</button></div>
             </form>
             {responseMessage && <p className={`feedback__response ${responseColor}`}>{responseMessage}</p>}
         </div>

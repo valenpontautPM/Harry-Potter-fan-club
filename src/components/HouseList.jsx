@@ -20,7 +20,7 @@ const HouseList = ({houses}) => {
     const columns = useBreakpointValue({ base: 1, lg: 2 });
     return(
         <Center>        
-            <Grid templateColumns={`repeat(${columns}, 1fr)`}>
+            <Grid className='houselist__grid' templateColumns={`repeat(${columns}, 1fr)`}>
             {houses?.map((house)=>(
                 <House
                 key={house.id}
