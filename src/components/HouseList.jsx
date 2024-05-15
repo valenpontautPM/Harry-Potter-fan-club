@@ -1,5 +1,5 @@
 import House from './House'
-import { Grid, Center } from '@chakra-ui/react'
+import { Grid, Center, useBreakpointValue } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
 
 const HouseList = ({houses}) => {
@@ -17,10 +17,10 @@ const HouseList = ({houses}) => {
         "Slytherin" : "/img/slytherin.png",
         "Hufflepuff" : "/img/hufflepuff.png"
     }
+    const columns = useBreakpointValue({ base: 1, lg: 2 });
     return(
-        <>
         <Center>        
-            <Grid templateColumns="repeat(2, 1fr)">
+            <Grid templateColumns={`repeat(${columns}, 1fr)`}>
             {houses?.map((house)=>(
                 <House
                 key={house.id}
@@ -31,7 +31,6 @@ const HouseList = ({houses}) => {
             ))}
             </Grid>            
         </Center>
-        </>
     )
 }
 

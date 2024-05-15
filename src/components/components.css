@@ -18,6 +18,7 @@
     font-family: 'Jim_Nightshade';
     padding-left: 1rem;
 }
+
 .navbar__flex__box__title__colored {
     color: #B4B4B4;
 }
@@ -30,6 +31,36 @@
 }
 .bold-text{
     font-weight: bold;
+}
+.navbar__flex__stack{
+    display: flex;
+    align-items: end;
+}
+.navbar__flex__stack__link{
+    padding-right: 1.5rem;
+}
+@media (max-width: 980px) {
+    .navbar__flex__box__title{
+        font-size: 1.8rem;
+        color: white;
+        font-family: 'Jim_Nightshade';
+        padding-left: 0;
+        text-align: center;
+    }
+    .navbar__flex{
+        flex-direction: column;
+    }
+    .navbar__flex__stack__link{
+        font-size: 0.7rem;
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
+    .navbar__flex__stack{
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+    }
+    
 }
 .container{
     min-height: calc(100vh - 96.79px);
@@ -110,6 +141,56 @@
 .houseDetail__container__card1__image{
     margin-top: 1rem;
 }
+.houseDetail__container__card2__text_color{
+    font-family: 'Inknut_Antiqua';
+}
+@media (max-width: 980px) {
+    .houseDetail{
+        width: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .houseDetail__container{
+        flex-direction: column;
+    }
+    .houseDetail__container__card1, .houseDetail__container__card2{
+        min-height: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        width: 17rem;
+    }
+    .houseDetail__container__card2{
+        margin-top: 0;
+    }
+    .houseDetail__container__card1__title{
+        font-family: 'Inknut_Antiqua';
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .houseDetail__container__card1__text{
+        padding-top: 0.4rem;
+        font-family: 'Inknut_Antiqua';
+    }
+    .houseDetail__container__card1__text_black{
+        color: black;
+        font-family: 'Inknut_Antiqua';
+        font-size: 1rem;
+    }
+    .houseDetail__container__card2__ul__li{
+        padding-top: 0.4rem;
+    }
+    .houseDetail__container__card2__text1{
+        font-family: 'Inknut_Antiqua';
+        font-size: 1.2rem;
+    }
+    .houseDetail__container__card2__text2{
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
 .no_page__div{
     min-height: calc(100vh - 96.79px);
     display: flex;
@@ -128,6 +209,15 @@
     font-family: 'Jim_Nightshade';
     font-size: 2rem;
 }
+@media (max-width: 980px) {
+    .no_page__div__div__image{
+        width: 14rem;
+    }
+    .no_page__div__div__text{
+        font-family: 'Jim_Nightshade';
+        font-size: 1.3rem;
+    }
+}
 .home__container__flex{
     justify-content: center;
     align-items: center;
@@ -141,7 +231,6 @@
     background-color: #afb3b4;
     border-radius: 0.5rem;
     width: 31rem;
-    height: 31rem;
     padding: 2rem;
 }
 .home__container__flex__div__title{
@@ -158,17 +247,49 @@
 }
 .home__container__flex__div__endtext{
     padding-top: 3rem;
+    padding-bottom: 1rem;
 }
 .home__link{
     text-decoration: underline; 
 }
+@media (max-width: 980px) {
+    .home__container__flex{
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+    .home__container__flex__div{
+        padding: 1rem;
+        width: 19rem;
+    }
+    .home__container__flex__div__title{
+        font-size: 1.2rem;
+        padding-top: 0;
+    }
+    .home__container__flex__div__endtext{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+    .home__container__flex__image{
+        height: 16rem;
+        padding: 0;
+        padding-top: 2rem;
+    }
+    .home__container__flex__div__bodytext,.home__container__flex__div__endtext{
+        font-family: 'Inknut_Antiqua';
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+}
 .feedback__card{
     background-color: #afb3b4;
     border-radius: 0.5rem;
-    border-radius: 0.5rem;
     width: 38rem;
-    height: 31rem;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
 }
 .feedback__container{
     display: flex;
@@ -208,19 +329,57 @@
     font-family: 'Inknut_Antiqua';
     padding-right: 2rem;
     padding-left: 2rem;
-    display: flex;
-    justify-content: center;
     margin-top: 2rem;
     margin-left: 14rem;
 }
 .feedback__response{
     font-family: 'Inknut_Antiqua';
     padding-top: 1rem;
-
 }
 .green_text{
     color: green;
 }
 .red_text{
     color: rgb(160, 30, 30);
+}
+@media (max-width: 980px) {
+    .feedback__card{
+        border-radius: 0.2rem;
+        width: 20rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    .feedback__container{
+        padding-top: 1rem;
+    }
+    .feedback__card__select{
+        width: 8.4rem;
+        font-size: 0.8rem;
+    }
+    .feedback__card__textarea{
+        width: 18rem;
+        height: 20rem;
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+    .feedback__button{
+        margin-top: 1rem;
+        margin-left: 6.5rem;
+        font-size: 0.8rem;
+    }
+    .feedback__title{
+        color: #2C3539;
+        font-family: 'Inknut_Antiqua';
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .feedback__card__text{
+        font-size: 0.8rem;
+    }
+    .feedback__response{
+        font-size: 0.8rem;
+        padding-top: 1rem;
+    }
 }

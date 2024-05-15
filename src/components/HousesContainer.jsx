@@ -1,4 +1,3 @@
-import { Container } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'; 
 import Loading from './Loading';
 import HouseList from './HouseList';
@@ -24,9 +23,9 @@ const HousesContainer = () => {
         fetchData();
     }, []);
     return (
-        <Container className='container'>
+        <div className='container'>
           {loading ? <Loading/> : <HouseList houses={houses}/>}
-        </Container>
+        </div>
     )
 }
 

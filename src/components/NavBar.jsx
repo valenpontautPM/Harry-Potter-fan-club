@@ -1,4 +1,4 @@
-import { Container,Flex, Spacer,Box,Text,Stack } from '@chakra-ui/react'
+import { Container,Flex, Spacer,Box,Text} from '@chakra-ui/react'
 import { Link, useLocation } from 'react-router-dom';
 import * as amplitude from '@amplitude/analytics-browser';
 const AMPLITUDE_API_KEY = "986ab970a868fbebc01877a2b9d342ab"
@@ -21,12 +21,12 @@ const NavBar = () => {
     return (
         <>
         <Container className="navbar__container">
-            <Flex>
+            <Flex className='navbar__flex'>
                 <Box>
                     <Link to={`/`} onClick={handleVisitNavLink("Home")}><div className='navbar__flex__box__title'>Harry Potter<span className='navbar__flex__box__title__colored'> fan club</span></div></Link>
                 </Box>
                 <Spacer/>
-                <Stack className="navbar__flex__stack" direction='row' spacing={9} align='end'>
+                <div className="navbar__flex__stack" >
                     <Link to={`/`} onClick={handleVisitNavLink("Home")}>
                         <Text className={`navbar__flex__stack__link ${location.pathname === '/' ? 'bold-text' : ''}`} variant='link'>
                             Home
@@ -38,7 +38,7 @@ const NavBar = () => {
                         </Text>
                     </Link>
                     <Link to={`/wizards`} onClick={handleVisitNavLink("Wizards")}>
-                        <Text className={`navbar__flex__stack__link ${location.pathname === '/wizards' ? 'bold-text' : ''}`} variant='link'>
+                        <Text className={`navbar__flex__stack__link ${/^\/wizards/.test(location.pathname) ? 'bold-text' : ''}`} variant='link'>
                             Wizards
                         </Text>
                     </Link>
@@ -62,7 +62,7 @@ const NavBar = () => {
                             Feedback
                         </Text>
                     </Link>
-                </Stack>
+                </div>
             </Flex>
         </Container>
         </>
