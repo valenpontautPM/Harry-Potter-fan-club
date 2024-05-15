@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'Inknut_Antiqua';
-    src: url('../fonts/Inknut_AntiquaJim_Nightshade/JimNightshade-Regular.ttf') format('truetype');
+    src: url('../fonts/Inknut_Antiqua/Inknut_Antiqua-Regular.ttf') format('truetype');
 }
 
 .navbar__container{
