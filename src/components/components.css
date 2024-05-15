@@ -313,7 +313,7 @@
 .feedback__card__select{
     font-family: 'Inknut_Antiqua';
     border-radius: 0.4rem;
-    width: 22rem;
+    width: 17.5rem;
 }
 .feedback__card__textarea{
     width: 34rem;
@@ -362,13 +362,13 @@
         padding-top: 1rem;
     }
     .feedback__card__select{
-        width: 8.4rem;
-        font-size: 0.8rem;
+        width: 5.9rem;
+        font-size: 0.7rem;
     }
     .feedback__card__textarea{
         width: 18rem;
         height: 20rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding: 0.5rem;
     }
     .feedback__form__div__button{
@@ -382,7 +382,7 @@
         font-weight: bold;
     }
     .feedback__card__text{
-        font-size: 0.8rem;
+        font-size: 0.74rem;
     }
     .feedback__response{
         font-size: 0.8rem;
