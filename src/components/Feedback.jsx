@@ -11,10 +11,12 @@ const Feedback = () => {
     const [feedback, setFeedback] = useState('');
     const [responseMessage, setResponseMessage] = useState('');
     const [responseColor, setResponseColor] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        if (isSubmitting) return; // Prevent multiple submissions
+        setIsSubmitting(true);
         const requestData = {
             feedbackType,
             feedback,
@@ -47,6 +49,8 @@ const Feedback = () => {
             }
         } catch (error) {
             setResponseMessage('Error al enviar feedback: ' + error.message);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -68,7 +72,7 @@ const Feedback = () => {
                 <div>
                     <textarea placeholder="Write something here..." className='feedback__card__textarea' value={feedback} onChange={(e) => setFeedback(e.target.value)} />
                 </div>
-                <button className='feedback__button' type='submit'>Send</button>
+                <button className='feedback__button' type='submit' disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send'}</button>
             </form>
             {responseMessage && <p className={`feedback__response ${responseColor}`}>{responseMessage}</p>}
         </div>
