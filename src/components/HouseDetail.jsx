@@ -43,7 +43,7 @@ const HouseDetail = ({name,houseColours,founder,animal,element,ghost,commonRoom,
                             {heads?.map((head)=>
                                 <ListItem color={color_cod} className='houseDetail__container__card2__ul__li' key={head.id}>
                                     <span className='houseDetail__container__card1__text_black'>{head.firstName} {head.lastName}</span>
-                                    <span className='houseDetail__container__card2__text_color'><Link to={`/wizards/${head.id}`} onClick={handleClickVisitHeadWizard(`${head.firstName} ${head.lastName}`, name)}> (+ Info)</Link></span>
+                                    <span className='houseDetail__container__card2__text_color'><Link to={`/wizards/${head.id}`} onClick={handleClickVisitHeadWizard(`${head.firstName} ${head.lastName}`, name)}> (+&nbsp;Info)</Link></span>
                                 </ListItem>
                             )}
                         </UnorderedList>
